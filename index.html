@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gbadeaux Studios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header id="header">
+        <div class="logo-container">
+            <div class="logo">G</div>
+            <p class="studio-name">Gbadeaux Studios</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home/About Us</a></li>
+                <li><a href="#mirror">Mirror Photo Booth</a></li>
+                <li><a href="#booth360">360 Booth</a></li>
+                <li><a href="#inquiry">Inquiry/Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="home" class="section">
+        <div class="container">
+            <h1>Welcome to Gbadeaux Studios</h1>
+            <p>Your go-to for top-tier Photo Booth rentals! Enhance your events with our 360 Booth Camera, capturing stunning panoramic videos, and our Magic Mirror Photo Booth, offering a fun and interactive photo experience. Gbadeaux Studios guarantees unforgettable memories for every occasion.</p>
+            <p>Our team of professionals is dedicated to delivering exceptional service, from setup to breakdown, ensuring a seamless and enjoyable experience for you and your guests. With customizable features and a variety of creative options, we bring your vision to life, creating memories that last a lifetime.<br><br> <storng>At Gbadeaux Studios, we don't just capture moments; we create experiences. </storng></p>
+            <a href="#inquiry" class="reserve-button">Reserve Now</a>
+        </div>
+    </section>
+
+    <section id="mirror" class="section hidden">
+        <div class="container gallery">
+            <!-- Row 1 -->
+            <div class="gallery-row">
+                <img src="Mirror-Photo-Booth-Rental-Picture-3-Fresno-CA-Smiley-Photo-Booths copy.jpg" alt="Mirror Photo Booth Image 1" class="gallery-image">
+                <img src="download.png" alt="Mirror Photo Booth Image 2" class="gallery-image">
+                <img src="download.png" alt="Mirror Photo Booth Image 3" class="gallery-image">
+                <img src="download.png" alt="Mirror Photo Booth Image 4" class="gallery-image">
+                <img src="download.png" alt="Mirror Photo Booth Image 5" class="gallery-image">
+                <img src="download.png" alt="Mirror Photo Booth Image 6" class="gallery-image">
+            </div>
+            <!-- Add more rows as needed -->
+        </div>
+    </section>
+
+    <section id="booth360" class="section hidden">
+        <div class="container gallery">
+            <!-- Row 1 -->
+            <div class="gallery-row">
+                <img src="360 Mirror PhotoBooth.jpeg" alt="360 Booth Image 1" class="gallery-image">
+                <img src="download.png" alt="360 Booth Image 2" class="gallery-image">
+                <img src="download.png" alt="360 Booth Image 3" class="gallery-image">
+                <img src="download.png" alt="360 Booth Image 4" class="gallery-image">
+                <img src="download.png" alt="360 Booth Image 5" class="gallery-image">
+                <img src="download.png" alt="360 Booth Image 6" class="gallery-image">
+            </div>
+            <!-- Add more rows as needed -->
+        </div>
+    </section>
+
+    <section id="inquiry" class="section hidden">
+        <div class="container">
+            <h2>Inquiry/Reservation</h2>
+            <form action="submit_inquiry.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="number">Number</label>
+                <input type="tel" id="number" name="number" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="event_date">Event Date</label>
+                <input type="date" id="event_date" name="event_date" required>
+
+                <label for="event_time">Event Time</label>
+                <input type="time" id="event_time" name="event_time" required>
+
+                <label for="event_type">Event Type</label>
+                <input type="text" id="event_type" name="event_type" required>
+
+                <label for="hours_needed">Hours Needed</label>
+                <input type="number" id="hours_needed" name="hours_needed" required>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

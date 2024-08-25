@@ -1,0 +1,288 @@
+/* Font Import: Add a sleek font like 'Roboto' or 'Trajan' */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trajan&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for a sleek look */
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+}
+
+/* Header with Logo */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+/* Logo container */
+.logo-container {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Match header background with transparency */
+}
+
+/* Glossy "G" in place of the image */
+.logo {
+    display: inline-block;
+    width: 75px; /* Set to match the original size */
+    height: 75px; /* Set to match the original size */
+    background-image: linear-gradient(45deg, #FFD700, #FFA500); /* Glossy gradient */
+    color: #000; /* Black color for the text */
+    font-family: 'Trajan', serif; /* Use Trajan font for the "G" */
+    font-size: 50px; /* Font size to fill the icon space */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center the text horizontally */
+    line-height: 75px; /* Center the text vertically */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8), 0 4px 15px rgba(0, 0, 0, 0.6); /* Glossy shadow */
+    transition: transform 0.3s ease;
+}
+
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Default navbar style */
+nav ul li a {
+    color: #bbb; /* Lighter grey for default text color */
+    text-decoration: none;
+    font-size: 20px; /* Keep the font size */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Glossy gold hover effect for navbar items */
+nav ul li a:hover {
+    background-image: linear-gradient(45deg, #FFA500, #FFD700); /* Reverse gradient for glossy effect */
+    color: #000; /* Black text color */
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8), 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Adjust padding to account for fixed header */
+    text-align: center; /* Center text on the Home/About Us page */
+}
+
+/* Ensure content starts below the header */
+section {
+    padding-top: 200px; /* Adjust based on header height */
+    margin-top: 120px; /* Space between the header and content */
+}
+
+h1, h2 {
+    font-family: 'Trajan', serif; /* Use Trajan for headings */
+    color: #fff; /* White text color */
+    font-weight: 700; /* Bold for headers */
+}
+
+h1 {
+    font-size: 36px; /* Larger font size for main heading */
+    margin-bottom: 10px; /* Adjust margin below heading */
+}
+
+h2 {
+    font-size: 28px; /* Larger font size for subheadings */
+    margin-bottom: 10px; /* Adjust margin below heading */
+}
+
+p {
+    font-family: 'Georgia', serif; /* Use Georgia for paragraphs */
+    font-size: 20px; /* Larger font size for paragraphs */
+    line-height: 1.6;
+    color: #fff; /* White text color */
+    max-width: 800px; /* Limit width of paragraphs */
+    margin: 10px auto; /* Center text block with adjusted margin */
+    padding: 0 20px; /* Add padding to ensure text doesn’t touch edges */
+}
+
+.booth-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Container for the gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%; /* Set the container to 90% of the screen width */
+}
+
+/* Flexbox row for the gallery images */
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line if necessary */
+    gap: 3%; /* Set the gap between images within the same row to 3% of the screen */
+}
+
+/* Style for the individual images in the gallery */
+.gallery-image {
+    height: 300px; /* Fixed height for all images */
+    flex-grow: 1; /* Allow images to grow and fill the available space */
+    object-fit: cover; /* Ensure the image covers the entire area while maintaining its aspect ratio */
+    margin-bottom: 20px; /* Larger gap between the rows */
+}
+
+/* Adjust width of images to ensure total width equals 90% */
+.gallery-row > .gallery-image:nth-child(1) {
+    flex-basis: 40%; /* Adjust to take 40% of the row */
+}
+
+.gallery-row > .gallery-image:nth-child(2) {
+    flex-basis: 30%; /* Adjust to take 30% of the row */
+}
+
+.gallery-row > .gallery-image:nth-child(3) {
+    flex-basis: 20%; /* Adjust to take 20% of the row */
+}
+
+/* Adjustments for different screen sizes */
+@media screen and (max-width: 1200px) {
+    .gallery-image {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-image {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+/* Form styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #000; /* Black background for form */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Subtle gold shadow */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    font-size: 16px; /* Larger font size for labels */
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Default border */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Larger font size for input and button text */
+}
+
+button {
+    background-image: linear-gradient(45deg, #FFD700, #FFA500); /* Glossy gradient */
+    color: #000; /* Black text color */
+    border: none;
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5), 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-image: linear-gradient(45deg, #FFA500, #FFD700); /* Reverse gradient for glossy effect */
+    color: #FFD700; /* Gold text color */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8), 0 4px 15px rgba(0, 0, 0, 0.6);
+    border: 2px solid #FFD700; /* Gold border on hover */
+}
+
+/* Hide sections by default */
+.hidden {
+    display: none;
+}
+
+/* Adjusting max-width specifically for the Home/About Us section */
+#home .container {
+    max-width: 800px; /* Smaller max-width for the text */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Adjust padding to account for fixed header */
+    text-align: center; /* Center text */
+}
+
+.reserve-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-image: linear-gradient(45deg, #FFD700, #FFA500); /* Glossy gradient */
+    color: #000; /* Black text color */
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px; /* Larger font size for buttons */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5), 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reserve-button:hover {
+    background-image: linear-gradient(45deg, #FFA500, #FFD700); /* Reverse gradient for glossy effect */
+    color: #FFD700; /* Gold text color on hover */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8), 0 4px 15px rgba(0, 0, 0, 0.6);
+    border: 2px solid #FFD700; /* Gold border on hover */
+}
+
+.section {
+    padding-top: 150px; /* Adjust this value based on the height of the header */
+}
+
+/* Style for the logo container */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Match header background with transparency */
+}
+
+/* Style for the glossy "G" */
+.glossy-g {
+    font-family: 'Trajan', serif;
+    font-size: 75px; /* Same size as the previous image */
+    color: #FFD700; /* Gold color */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 1);
+}
+
+/* Style for the studio name */
+.studio-name {
+    font-family: 'Trajan', serif;
+    font-size: 24px;
+    color: #FFD700; /* Gold color */
+    margin-top: 10px; /* Space between the G and the text */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 1);
+}
+
